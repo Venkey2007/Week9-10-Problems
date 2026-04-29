@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class CompareStrings {
 
     public static boolean compareUsingCharAt(String str1, String str2) {
-
         if (str1.length() != str2.length()) {
             return false;
         }
@@ -18,25 +17,24 @@ public class CompareStrings {
     }
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter First String: ");
+        System.out.print("Enter first string: ");
         String str1 = scanner.next();
 
-        System.out.print("Enter Second String: ");
+        System.out.print("Enter second string: ");
         String str2 = scanner.next();
 
         boolean customResult = compareUsingCharAt(str1, str2);
         boolean builtInResult = str1.equals(str2);
 
-        System.out.println("Using charAt(): " + customResult);
-        System.out.println("Using equals(): " + builtInResult);
+        System.out.println("Using charAt Comparison: " + customResult);
+        System.out.println("Using equals Method: " + builtInResult);
 
         if (customResult == builtInResult) {
-            System.out.println("Both Results Match.");
+            System.out.println("Both results match.");
         } else {
-            System.out.println("Results Do Not Match.");
+            System.out.println("Results do not match.");
         }
     }
 }
